@@ -212,6 +212,9 @@ public class MainActivity extends AppCompatActivity {
         //Computing the sum of score array, which has the 1 or in each index,depending on correct or incorrect answers
         int sum=0;
        // your code here
+        for (int i=0; i<score.length; i++ ){
+            sum += score[i];
+        }
         return sum;
     }
 
@@ -229,8 +232,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String getInterpretation(int [][]dataFrame,double slope){
-       //provide interpretation based on your slope analysis
+        //provide interpretation based on your slope analysis
         // Your code here
+        if (slope==0){
+            return "You are not at all good in it";
+        }
+        else if(slope>0 && slope<1.5){
+            return "Improvement is required";
+        }
+        else if(slope>1.5 && slope<=3){
+            return "You are getting better";
+        }
+        else if(slope<0){
+            return "Decline in Performance";
+        }
         return "Your Interpretation";
     }
 }
