@@ -73,11 +73,127 @@ public class MainActivity extends AppCompatActivity {
 
         int operand1 = random.nextInt(10);
         int operand2 = random.nextInt(10);
-        //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
-        String operator = operators[random.nextInt(4)];
-        textView2.setText(operand1 + operator + operand2);
+        correctButton = random.nextInt(3);
+        int correctans=-100;
+        String operator=operators[random.nextInt(4)];
+        textView2.setText(operand1+operator+operand2);
+        if(correctButton==0){
+            if(operator.equals("+"))
+            {
+                button1.setText(operand1+operand2+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("-"))
+            {
+                button1.setText(operand1-operand2+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("/")) {
+                button1.setText(operand1/operand2+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("*"))
+            {
+                button1.setText(operand1*operand2+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+        }
+        else if(correctButton==1){
+            if(operator.equals("+"))
+            {
+                button1.setText(operand1+operand2+20+"");
+                button2.setText((operand1+operand2+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("-"))
+            {
+                button1.setText(operand1+operand2+20+"");
+                button2.setText((operand1-operand2+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("/")) {
+                button1.setText(operand1/operand2+20+"");
+                button2.setText((operand1/operand2+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("*"))
+            {
+                button1.setText(operand1*operand2+30+"");
+                button2.setText((operand1*operand2+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+        }
+        else if(correctButton==2){
+            if(operator.equals("+"))
+            {
+                button1.setText(operand1+operand2+50+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("-"))
+            {
+                button1.setText(operand1+operand2+50+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1-operand2+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("/")) {
+                button1.setText(operand1+operand2+20+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1/operand2+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+            else if(operator.equals("*"))
+            {
+                button1.setText(operand1*operand2+60+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1*operand2+" "));
+                button4.setText((operand1+operand2+30+" "));
+            }
+        }
+        else{
+            if(operator.equals("+"))
+            {
+                button1.setText(operand1+operand2+4+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1+operand2+" "));
+            }
+            else if(operator.equals("-"))
+            {
+                button1.setText(operand1+operand2+6+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1-operand2+" "));
+            }
+            else if(operator.equals("/")) {
+                button1.setText(operand1/operand2+60+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1/operand2+" "));
+            }
+            else if(operator.equals("*"))
+            {
+                button1.setText(operand1*operand2+69+"");
+                button2.setText((operand1+operand2+10+" "));
+                button3.setText((operand1+operand2+20+" "));
+                button4.setText((operand1*operand2+" "));
+            }
+        }
 
-      // Your code here, to diplay correct and incorrect options on the buttons
 
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
